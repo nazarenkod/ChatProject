@@ -1,17 +1,27 @@
 package entities;
 
-import lombok.Builder;
-import lombok.Getter;
 
 /**
  * Created by nazarenkod on 10-Jul-17.
  */
-@Builder
+
 public class User {
-    @Getter
+
     private String login;
-    @Getter
+
+    public User(String login, String password) {
+        this.login = login;
+        this.password = password;
+    }
+
     private String password;
-    @Getter
-    private String proxy;
+
+
+    public String getLogin() {
+        return login;
+    }
+
+    public String getPassword() {return password;}
+
+
 }

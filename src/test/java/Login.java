@@ -1,7 +1,8 @@
+import entities.Model;
 import entities.User;
-import org.bouncycastle.jcajce.provider.symmetric.Threefish;
 import org.testng.annotations.Test;
 
+import static site.MyfreecamsSite.framePage;
 import static site.MyfreecamsSite.homePage;
 
 /**
@@ -9,22 +10,19 @@ import static site.MyfreecamsSite.homePage;
  */
 public class Login extends Base {
 
-    User user = User.builder().
-            login(DataLoader.getInstance().getProperty("login")).
-            password(DataLoader.getInstance().getProperty("password")).
-            proxy(DataLoader.getInstance().getProperty("proxy")).
-            build();
+
+    User user = new User("slompis","teddybear");
+    Model model = new Model("Alisha_eyes");
 
 
     @Test
     public void login() throws InterruptedException {
+        //framePage.open();
+        homePage.open();
+        homePage.login(user);
+        homePage.goToModelPage(model);
 
-//        BaseMethod baseMethod = new BaseMethod();
-//        baseMethod.loginWithProxy(user);
-//        homePage.login(user);
 
-            homePage.open();
-            Thread.sleep(50000);
     }
 
 }
