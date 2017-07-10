@@ -1,9 +1,8 @@
-import com.epam.jdi.uitests.web.settings.WebSettings;
+
 import entities.User;
 import org.openqa.selenium.Proxy;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
+
+
 
 import java.util.ArrayList;
 import java.util.Random;
