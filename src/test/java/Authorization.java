@@ -26,17 +26,8 @@ public class Authorization {
         WebDriver driver = new ChromeDriver(options);
 
         WebDriverWait wait = new WebDriverWait(driver,20);
-        driver.get("https://2ip.ru/");
-        Thread.sleep(10000);
-        driver.get("http://myfreecams.com/php/login.php?request=login&target");
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("username")));
-        driver.findElement(By.id("username")).clear();
-        driver.findElement(By.id("username")).sendKeys(sUserName);
-        driver.findElement(By.id("password")).clear();
-        driver.findElement(By.id("password")).sendKeys(sPassword);
-        driver.findElement(By.xpath("//input[@class='button']")).click();
-        Thread.sleep(Long.parseLong("5000"));
-        driver.get("http://www.myfreecams.com/#"+sModel);
+        driver.get("");
+   
     }
 
     @DataProvider
